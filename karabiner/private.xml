@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<root>
+    <appdef>
+        <appname>SLACK</appname>
+        <equal>com.tinyspeck.slackmacgap</equal>
+    </appdef>
+    <item>
+        <name>For Slack CTRL+N=move next channel, CTRL+P=move previous channel, CTRL+A=move unread channel</name>
+        <identifier>private.app_slack_move_channel_with_ctrln_ctrlp</identifier>
+        <only>SLACK</only>
+        <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::CONTROL_L, KeyCode::CURSOR_DOWN, ModifierFlag::OPTION_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::P, ModifierFlag::CONTROL_L, KeyCode::CURSOR_UP, ModifierFlag::OPTION_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::A, ModifierFlag::CONTROL_L, KeyCode::CURSOR_DOWN, ModifierFlag::OPTION_L, ModifierFlag::SHIFT_L</autogen>
+    </item>
+
+    <item>
+        <name>Escape to EISUU+Escape only terminal</name>
+        <identifier>remap.jis_escape2eisuuAndEscape_terminal</identifier>
+        <only>TERMINAL</only>
+        <autogen>--KeyOverlaidModifier-- KeyCode::ESCAPE, KeyCode::JIS_EISUU, KeyCode::ESCAPE</autogen>
+    </item>
+    <item>
+        <name>c-w to EISUU+Escape only terminal</name>
+        <identifier>remap.jis_c-w2eisuuAndEscape_terminal</identifier>
+        <only>TERMINAL</only>
+        <autogen>--KeyOverlaidModifier-- KeyCode::W, VK_CONTROL, KeyCode::JIS_EISUU, KeyCode::W, VK_CONTROL</autogen>
+    </item>
+    <item>
+        <name>Semicolon to Return plus</name>
+        <appendix>(+ Control+Semicolon to Semicolon, + Shift+Semicolon to plus)</appendix>
+        <identifier>remap.semicolon2return_controlsemicolon2semicolon_plus</identifier>
+        <autogen>--KeyToKey-- KeyCode::SEMICOLON, VK_CONTROL, KeyCode::SEMICOLON</autogen>
+        <autogen>--KeyToKey-- KeyCode::SEMICOLON, VK_SHIFT, KeyCode::KEYPAD_PLUS</autogen>
+        <autogen>--KeyToKey-- KeyCode::SEMICOLON, KeyCode::RETURN</autogen>
+    </item>
+    <item>
+        <name>Control_L to Control_L</name>
+        <appendix>(+ When you type Control_L only, send Escape and ime off only terminal)</appendix>
+        <identifier>remap.controlL2controlL_escape_imeoff_terminal</identifier>
+        <only>TERMINAL</only>
+        <autogen>--KeyOverlaidModifier-- KeyCode::CONTROL_L, KeyCode::CONTROL_L, KeyCode::ESCAPE, KeyCode::JIS_EISUU</autogen>
+    </item>
+</root>
