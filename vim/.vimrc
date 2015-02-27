@@ -252,7 +252,7 @@ nmap <c-r> :Unite snippet<cr>
 imap <c-r> <plug>(neosnippet_start_unite_snippet)
 imap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
 smap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-let g:neosnippet#snippets_directory = '~/vim/snippets'
+let g:neosnippet#snippets_directory = '~/myconf/vim/snippets'
 
 "" bracket
 inoremap {<Tab> {}<LEFT>
