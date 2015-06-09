@@ -1,13 +1,16 @@
 
 "neobundle
-set nocompatible
-filetype off
+if 0 | endif
+
 if has('vim_starting')
+    if &compatible
+        set nocompatible
+    endif
     set runtimepath+=$HOME/.vim/bundle/neobundle.vim
-    call neobundle#begin(expand('~/.vim/bundle'))
-    NeoBundleFetch 'Sougo/neobundle.vim'
-    call neobundle#end()
 endif
+
+call neobundle#begin(expand('~/.vim/bundle'))
+NeoBundleFetch 'Sougo/neobundle.vim'
 
 NeoBundle 'Shougo/neobundle.vim.git'
 NeoBundle 'Shougo/unite.vim.git'
@@ -52,10 +55,14 @@ NeoBundle 'Shougo/vimproc.vim', {
 \    },
 \ }
 
+call neobundle#end()
+
+filetype indent on
+NeoBundleCheck
+
 "settings
 filetype on
 filetype plugin on
-filetype indent on
 colorscheme molokai
 
 "command
