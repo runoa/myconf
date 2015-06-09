@@ -334,9 +334,6 @@ nnoremap H b
 nnoremap L w
 nnoremap w ^
 nnoremap e $
-nnoremap I H
-nnoremap O L
-nnoremap <space>gg g;
 
 ""columnjump
 nmap <c-k> <Plug>(columnjump-backward)

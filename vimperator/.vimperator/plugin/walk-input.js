@@ -80,8 +80,8 @@ var types = [
   "url",
   "tel",
   "color",
-].map(function(type) "@type=" + type.quote()).join(" or ");
-var xpath = '//input[(' + types + ' or not(@type)) and not(@disabled)] | //textarea';
+].map(function(type) "@type=" + JSON.stringify(type)).join(" or ");
+var xpath = '//input[(' + types + ' or not(@type)) and not(@disabled)] | //textarea | //*[@contenteditable="true"]';
 
 function isVisible (elem) {
   while (elem && !(elem instanceof HTMLDocument)) {
