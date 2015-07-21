@@ -423,7 +423,8 @@ nnoremap <space>wj :sp<cr><c-w>j
 ""window move
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
-nnoremap W <c-w>
+nnoremap Wj <c-w>j
+nnoremap Wk <c-w>k
 
 ""window size
 nnoremap <space>w0 <c-w>=
