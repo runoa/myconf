@@ -30,7 +30,7 @@
         <appendix>(+ Control+Semicolon to Semicolon, + Shift+Semicolon to plus)</appendix>
         <identifier>remap.semicolon2return_controlsemicolon2semicolon_plus</identifier>
         <autogen>--KeyToKey-- KeyCode::SEMICOLON, VK_CONTROL, KeyCode::SEMICOLON</autogen>
-        <autogen>--KeyToKey-- KeyCode::SEMICOLON, VK_SHIFT, KeyCode::KEYPAD_PLUS</autogen>
+        <autogen>--KeyToKey-- KeyCode::SEMICOLON, VK_SHIFT, KeyCode::SEMICOLON, VK_SHIFT</autogen>
         <autogen>--KeyToKey-- KeyCode::SEMICOLON, KeyCode::RETURN</autogen>
     </item>
     <item>
@@ -39,5 +39,15 @@
         <identifier>remap.controlL2controlL_escape_imeoff_terminal</identifier>
         <only>TERMINAL</only>
         <autogen>--KeyOverlaidModifier-- KeyCode::CONTROL_L, KeyCode::CONTROL_L, KeyCode::ESCAPE, KeyCode::JIS_EISUU</autogen>
+    </item>
+    <item>
+        <name>Control_L KANA to |</name>
+        <identifier>controll_kana_to_pipe</identifier>
+        <autogen>--KeyToKey-- KeyCode::JIS_KANA, VK_CONTROL, KeyCode::JIS_YEN, VK_SHIFT</autogen>
+    </item>
+    <item>
+        <name>Control_L EISUU to -></name>
+        <identifier>controll_eisuu_to_arrow</identifier>
+        <autogen>--KeyToKey-- KeyCode::JIS_EISUU, VK_CONTROL, KeyCode::MINUS, KeyCode::DOT, VK_SHIFT</autogen>
     </item>
 </root>
