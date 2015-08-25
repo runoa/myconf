@@ -86,10 +86,10 @@ set statusline=%F%m%r%h%w\ %{fugitive#statusline()}%=\ %Y,\ %{&fileencoding},\ %
 "color
 set cursorline
 set cursorcolumn
-highlight CursorLine ctermbg=4
+highlight CursorLine ctermfg=8 ctermbg=4
 highlight CursorColumn ctermbg=4
-highlight Cursor ctermbg=4
-highlight Visual ctermfg=0 ctermbg=2
+highlight CursorLineNr ctermbg=4 ctermfg=8
+highlight Visual ctermfg=5 ctermbg=black
 au BufRead,BufNewFile *.memo set syntax=hybrid
 au BufRead,BufNewFile *.txt set syntax=hybrid
 
