@@ -86,7 +86,7 @@ set statusline=%F%m%r%h%w\ %{fugitive#statusline()}%=\ %Y,\ %{&fileencoding},\ %
 "color
 set cursorline
 set cursorcolumn
-highlight CursorLine ctermfg=8 ctermbg=4
+highlight CursorLine ctermbg=4
 highlight CursorColumn ctermbg=4
 highlight CursorLineNr ctermbg=4 ctermfg=8
 highlight Visual ctermfg=5 ctermbg=black
