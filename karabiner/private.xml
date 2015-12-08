@@ -5,7 +5,7 @@
         <equal>com.tinyspeck.slackmacgap</equal>
     </appdef>
     <item>
-        <name>For Slack CTRL+N=move next channel, CTRL+P=move previous channel, CTRL+A=move unread channel</name>
+        <name>For Slack CTRL+N=move next channel, CTRL+P=move previous channel, CTRL+W=move unread channel</name>
         <identifier>private.app_slack_move_channel_with_ctrln_ctrlp</identifier>
         <only>SLACK</only>
         <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::CONTROL_L, KeyCode::CURSOR_DOWN, ModifierFlag::OPTION_L</autogen>
@@ -49,5 +49,15 @@
         <name>Control_L EISUU to -></name>
         <identifier>controll_eisuu_to_arrow</identifier>
         <autogen>--KeyToKey-- KeyCode::JIS_EISUU, VK_CONTROL, KeyCode::MINUS, KeyCode::DOT, VK_SHIFT</autogen>
+    </item>
+    <item>
+        <name>Shift_L KANA to \</name>
+        <identifier>shift_kana_to_backslash</identifier>
+        <autogen>--KeyToKey-- KeyCode::JIS_KANA, VK_SHIFT, KeyCode::VK_JIS_BACKSLASH</autogen>
+    </item>
+    <item>
+        <name>Shift_L EISUU to =></name>
+        <identifier>controll_eisuu_to_arrow2</identifier>
+        <autogen>--KeyToKey-- KeyCode::JIS_EISUU, VK_SHIFT, KeyCode::MINUS, VK_SHIFT, KeyCode::DOT, VK_SHIFT</autogen>
     </item>
 </root>
