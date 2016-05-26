@@ -25,6 +25,7 @@ NeoBundle 'vim-scripts/L9.git'
 NeoBundle 'vim-scripts/TwitVim.git'
 NeoBundle 'vim-scripts/AutoComplPop.git'
 NeoBundle 'vim-scripts/FuzzyFinder.git'
+NeoBundle 'YankRing.vim'
 NeoBundle 'basyura/TweetVim.git'
 NeoBundle 'tpope/vim-fugitive.git'
 NeoBundle 'tpope/vim-surround.git'
@@ -45,6 +46,7 @@ NeoBundle 'tomtom/tcomment_vim.git'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'mhinz/vim-startify'
 NeoBundle 'terryma/vim-multiple-cursors'
+NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {
 \     'windows' : 'tools\\update-dll-mingw',
@@ -54,6 +56,7 @@ NeoBundle 'Shougo/vimproc.vim', {
 \     'unix' : 'gmake',
 \    },
 \ }
+NeoBundle 'sjl/gundo.vim'
 
 call neobundle#end()
 
@@ -66,6 +69,8 @@ filetype plugin on
 colorscheme molokai
 
 "command
+set nowritebackup
+set nobackup
 set noswapfile
 set hidden
 set showcmd
@@ -113,6 +118,8 @@ set ignorecase
 set smartcase
 set hlsearch
 nnoremap <space>h :set hlsearch! hlsearch?<cr>
+cnoremap <expr> / getcmdtype() == '/' ? '\/' : '/'
+cnoremap <expr> ? getcmdtype() == '?' ? '\?' : '?'
 
 ""highlight
 nmap <space>mm <Plug>(quickhl-manual-this)
@@ -142,7 +149,12 @@ set expandtab
 set softtabstop=4
 
 "edit
+" 参考: http://lambdalisue.hatenablog.com/entry/2013/06/23/071344
+set shiftround
+set infercase
+set virtualedit=all
 set autoindent
+set matchpairs& matchpairs+=<:>
 set cindent
 set pastetoggle=,p
 nnoremap <space>ww :w<cr>
@@ -153,6 +165,8 @@ nnoremap U <c-r>
 vnoremap <c-r> :s/    /\t/g<cr>
 au BufRead,BufNewFile *.t set filetype=perl
 set fileencodings=utf-8,euc-jp,iso-2022-jp-3,iso-2022-jp,euc-jisx0213,ucs-bom,eucjp-ms,cp932
+nnoremap <space>p :YRShow<cr>
+nnoremap <space>uu :GundoToggle<cr>
 
 ""register
 vnoremap ra "ay
