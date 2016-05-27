@@ -152,7 +152,6 @@ set softtabstop=4
 " 参考: http://lambdalisue.hatenablog.com/entry/2013/06/23/071344
 set shiftround
 set infercase
-set virtualedit=all
 set autoindent
 set matchpairs& matchpairs+=<:>
 set cindent
