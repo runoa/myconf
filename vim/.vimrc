@@ -283,6 +283,13 @@ inoremap <<Tab> <><LEFT>
 inoremap "<Tab> ""<LEFT>
 inoremap '<Tab> ''<LEFT>
 
+inoremap {< {},<LEFT><LEFT>
+inoremap [< [],<LEFT><LEFT>
+inoremap (< (),<LEFT><LEFT>
+inoremap << <>,<LEFT><LEFT>
+inoremap "< "",<LEFT><LEFT>
+inoremap '< '',<LEFT><LEFT>
+
 inoremap {+ {};<LEFT><LEFT>
 inoremap [+ [];<LEFT><LEFT>
 inoremap (+ ();<LEFT><LEFT>
