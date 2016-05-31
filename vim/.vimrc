@@ -47,6 +47,7 @@ NeoBundle 'rking/ag.vim'
 NeoBundle 'mhinz/vim-startify'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'terryma/vim-multiple-cursors'
+NeoBundle 'stephpy/vim-yaml'
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {
 \     'windows' : 'tools\\update-dll-mingw',
