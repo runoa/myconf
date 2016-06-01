@@ -5,6 +5,7 @@ export PYTHONPATH=/usr/local/lib/python3.5/site-packages/
 stty -ixon -ixoff
 git config --global help.autocorrect -1
 alias gti='git'
+alias ack='ack -i'
 
 SOCK="/tmp/ssh-agent-$USER"
 if test $SSH_AUTH_SOCK && [ $SSH_AUTH_SOCK != $SOCK ]
