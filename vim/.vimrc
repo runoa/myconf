@@ -67,7 +67,6 @@ NeoBundleCheck
 "settings
 filetype on
 filetype plugin on
-colorscheme molokai
 
 "command
 set nowritebackup
@@ -88,30 +87,6 @@ set listchars=tab:^\ ,trail:$
 set scrolloff=10
 set laststatus=2
 set statusline=%F%m%r%h%w\ %{fugitive#statusline()}%=\ %Y,\ %{&fileencoding},\ %l/%L]
-
-"color
-set cursorline
-set cursorcolumn
-highlight CursorLine ctermbg=4
-highlight CursorColumn ctermbg=4
-highlight CursorLineNr ctermbg=4 ctermfg=8
-highlight Visual ctermfg=5 ctermbg=black
-au BufRead,BufNewFile *.memo set syntax=hybrid
-au BufRead,BufNewFile *.txt set syntax=hybrid
-
-""zenkaku space
-function! ZenkakuSpace()
-    highlight ZenkakuSpace ctermbg=5
-endfunction
-
-if has('syntax')
-    augroup ZenkakuSpace
-        autocmd!
-        autocmd ColorScheme * call ZenkakuSpace()
-        autocmd VimEnter,WinEnter * match ZenkakuSpace /　/
-    augroup END
-    call ZenkakuSpace()
-endif
 
 " search
 set incsearch
@@ -521,3 +496,28 @@ nnoremap <space>mf :MultipleCursorsFind
 vnoremap <space>mf :MultipleCursorsFind 
 vnoremap <space>M "vy:MultipleCursorsFind <c-r>=substitute(escape(@v,'\/'),"\n",'\\n','g')<cr><cr>
 
+"color
+" colorscheme molokai
+set cursorline
+set cursorcolumn
+au BufRead,BufNewFile *.memo set syntax=hybrid
+au BufRead,BufNewFile *.txt set syntax=hybrid
+
+""zenkaku space
+function! ZenkakuSpace()
+    highlight ZenkakuSpace ctermbg=5
+endfunction
+
+if has('syntax')
+    augroup ZenkakuSpace
+        autocmd!
+        autocmd ColorScheme * call ZenkakuSpace()
+        autocmd VimEnter,WinEnter * match ZenkakuSpace /　/
+    augroup END
+    call ZenkakuSpace()
+endif
+
+highlight CursorLine ctermbg=4
+highlight CursorColumn ctermbg=4
+highlight CursorLineNr ctermbg=4 ctermfg=8
+highlight Visual ctermfg=8 ctermbg=2
