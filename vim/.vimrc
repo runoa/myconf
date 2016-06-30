@@ -48,6 +48,16 @@ NeoBundle 'mhinz/vim-startify'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'stephpy/vim-yaml'
+
+" colorschemes
+NeoBundle 'ujihisa/unite-colorscheme'
+NeoBundle 'sjl/badwolf'
+NeoBundle 'tomasr/molokai'
+NeoBundle 'morhetz/gruvbox'
+NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'jpo/vim-railscasts-theme'
+
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {
 \     'windows' : 'tools\\update-dll-mingw',
@@ -497,12 +507,6 @@ vnoremap <space>mf :MultipleCursorsFind
 vnoremap <space>M "vy:MultipleCursorsFind <c-r>=substitute(escape(@v,'\/'),"\n",'\\n','g')<cr><cr>
 
 "color
-" colorscheme molokai
-set cursorline
-set cursorcolumn
-au BufRead,BufNewFile *.memo set syntax=hybrid
-au BufRead,BufNewFile *.txt set syntax=hybrid
-
 ""zenkaku space
 function! ZenkakuSpace()
     highlight ZenkakuSpace ctermbg=5
@@ -517,7 +521,16 @@ if has('syntax')
     call ZenkakuSpace()
 endif
 
+colorscheme badwolf
+set cursorline
+set cursorcolumn
+au BufRead,BufNewFile *.memo set syntax=hybrid
+au BufRead,BufNewFile *.txt set syntax=hybrid
+
 highlight CursorLine ctermbg=4
 highlight CursorColumn ctermbg=4
 highlight CursorLineNr ctermbg=4 ctermfg=8
 highlight Visual ctermfg=8 ctermbg=2
+
+set t_Co=256
+
