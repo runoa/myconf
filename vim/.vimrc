@@ -142,6 +142,7 @@ set autoindent
 set matchpairs& matchpairs+=<:>
 set cindent
 set pastetoggle=,p
+set backspace=indent,eol,start
 nnoremap <space>ww :w<cr>
 nnoremap <space>wq :wq<cr>
 nnoremap <space>qq :q<cr>
