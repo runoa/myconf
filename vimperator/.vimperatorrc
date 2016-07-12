@@ -56,3 +56,8 @@ cmap <C-h> <BS>
 map <C-d> <DEL>
 imap <C-d> <DEL>
 cmap <C-d> <DEL>
+
+" Onetab
+nnoremap v :open resource://extension-at-one-tab-dot-com/data/onetab.html<CR>
+nnoremap V :tabopen resource://extension-at-one-tab-dot-com/data/onetab.html<CR>
+
