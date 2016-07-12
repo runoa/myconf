@@ -19,8 +19,8 @@ NeoBundle 'Shougo/vimshell.git'
 NeoBundle 'Shougo/vimfiler.git'
 NeoBundle 'Shougo/neosnippet.git'
 NeoBundle 'Shougo/neosnippet-snippets.git'
-"NeoBundle 'scrooloose/syntastic'
-NeoBundle 'mileszs/ack.vim'
+" NeoBundle 'scrooloose/syntastic'
+" NeoBundle 'mileszs/ack.vim'
 NeoBundle 'vim-scripts/L9.git'
 NeoBundle 'vim-scripts/TwitVim.git'
 NeoBundle 'vim-scripts/AutoComplPop.git'
@@ -41,7 +41,7 @@ NeoBundle 't9md/vim-quickhl.git'
 NeoBundle 'kmnk/vim-unite-giti.git'
 NeoBundle 'mattn/webapi-vim.git'
 NeoBundle 'mattn/emmet-vim'
-"NeoBundle 'vimtaku/vim-mlh.git'
+" NeoBundle 'vimtaku/vim-mlh.git'
 NeoBundle 'tomtom/tcomment_vim.git'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'mhinz/vim-startify'
@@ -150,6 +150,7 @@ nnoremap <space>qa :qall<cr>
 nnoremap U <c-r>
 vnoremap <c-r> :s/    /\t/g<cr>
 au BufRead,BufNewFile *.t set filetype=perl
+au BufRead,BufNewFile *.txt set filetype=txt
 set fileencodings=utf-8,euc-jp,iso-2022-jp-3,iso-2022-jp,euc-jisx0213,ucs-bom,eucjp-ms,cp932
 nnoremap <space>p :YRShow<cr>
 nnoremap <space>uu :GundoToggle<cr>
