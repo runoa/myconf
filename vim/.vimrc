@@ -69,6 +69,11 @@ NeoBundle 'Shougo/vimproc.vim', {
 \ }
 NeoBundle 'sjl/gundo.vim'
 
+" マークダウンを書きやすくする
+NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'kannokanno/previm'
+NeoBundle 'tyru/open-browser.vim'
+
 call neobundle#end()
 
 filetype indent on
@@ -141,7 +146,7 @@ set infercase
 set autoindent
 set matchpairs& matchpairs+=<:>
 set cindent
-set pastetoggle=<c-v>
+set pastetoggle=<c-o>
 set backspace=indent,eol,start
 nnoremap <space>ww :w<cr>
 nnoremap <space>wq :wq<cr>
@@ -152,8 +157,8 @@ vnoremap <c-r> :s/    /\t/g<cr>
 au BufRead,BufNewFile *.t set filetype=perl
 au BufRead,BufNewFile *.txt set filetype=txt
 set fileencodings=utf-8,euc-jp,iso-2022-jp-3,iso-2022-jp,euc-jisx0213,ucs-bom,eucjp-ms,cp932
-nnoremap <space>p :YRShow<cr>
-nnoremap <space>uu :GundoToggle<cr>
+" nnoremap <space>p :YRShow<cr>
+" nnoremap <space>uu :GundoToggle<cr>
 
 ""register
 vnoremap ra "ay
@@ -535,4 +540,10 @@ highlight CursorLineNr ctermbg=4 ctermfg=8
 highlight Visual ctermfg=8 ctermbg=2
 
 set t_Co=256
+
+" マークダウンを書きやすくする
+" VimでMarkdownの環境を整える | KEYPOINT – キー・ポイント株式会社 開発日誌
+" https://www.key-p.com/blog/staff/archives/9032
+au BufRead,BufNewFile *.md set filetype=markdown
+nmap <space>pp :PrevimOpen<cr>
 
