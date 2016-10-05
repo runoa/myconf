@@ -61,3 +61,4 @@ cmap <C-d> <DEL>
 nnoremap v :open resource://extension-at-one-tab-dot-com/data/onetab.html<CR>
 nnoremap V :tabopen resource://extension-at-one-tab-dot-com/data/onetab.html<CR>
 
+nmap ,sp :postSlack<Space>

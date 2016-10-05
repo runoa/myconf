@@ -146,7 +146,7 @@ set infercase
 set autoindent
 set matchpairs& matchpairs+=<:>
 set cindent
-set pastetoggle=<c-o>
+set pastetoggle=<c-t>
 set backspace=indent,eol,start
 nnoremap <space>ww :w<cr>
 nnoremap <space>wq :wq<cr>
@@ -155,7 +155,8 @@ nnoremap <space>qa :qall<cr>
 nnoremap U <c-r>
 vnoremap <c-r> :s/    /\t/g<cr>
 au BufRead,BufNewFile *.t set filetype=perl
-au BufRead,BufNewFile *.txt set filetype=txt
+au BufRead,BufNewFile *.memo set syntax=hybrid
+au BufRead,BufNewFile *.txt set syntax=hybrid
 set fileencodings=utf-8,euc-jp,iso-2022-jp-3,iso-2022-jp,euc-jisx0213,ucs-bom,eucjp-ms,cp932
 " nnoremap <space>p :YRShow<cr>
 " nnoremap <space>uu :GundoToggle<cr>
@@ -190,6 +191,8 @@ nmap r <plug>(operator-replace)
 ""save
 inoremap <c-s> <esc>:w<cr>
 nnoremap <c-s> :w<cr>
+inoremap <c-q> <esc>:wq<cr>
+nnoremap <c-q> :wq<cr>
 
 ""emacs keybind
 inoremap <c-f> <right>
@@ -531,8 +534,6 @@ endif
 colorscheme badwolf
 set cursorline
 set cursorcolumn
-au BufRead,BufNewFile *.memo set syntax=hybrid
-au BufRead,BufNewFile *.txt set syntax=hybrid
 
 highlight CursorLine ctermbg=4
 highlight CursorColumn ctermbg=4
@@ -545,5 +546,6 @@ set t_Co=256
 " VimでMarkdownの環境を整える | KEYPOINT – キー・ポイント株式会社 開発日誌
 " https://www.key-p.com/blog/staff/archives/9032
 au BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.txt set filetype=markdown
 nmap <space>pp :PrevimOpen<cr>
 
