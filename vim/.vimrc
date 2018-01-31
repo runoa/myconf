@@ -441,6 +441,8 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 nnoremap Wj <c-w>j
 nnoremap Wk <c-w>k
+nnoremap Wh <c-w>h
+nnoremap Wl <c-w>l
 
 ""window size
 nnoremap <space>w0 <c-w>=
