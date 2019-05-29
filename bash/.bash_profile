@@ -8,7 +8,14 @@ alias g='git'
 alias gs='git status'
 alias gc='git checkout'
 alias gd='git diff'
+alias gg='git grep'
+alias gp='git push origin'
+alias gpl='git pull origin'
+alias gf='git fetch origin'
+alias gm='git merge'
 alias ack='ack -i'
+alias rc='rails console'
+alias s='source ~/.bash_profile'
 
 SOCK="/tmp/ssh-agent-$USER"
 if test $SSH_AUTH_SOCK && [ $SSH_AUTH_SOCK != $SOCK ]
