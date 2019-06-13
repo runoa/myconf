@@ -143,10 +143,10 @@ let g:quickhl_manual_colors = [
     \ ]
 
 "tab
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
-set softtabstop=4
+set softtabstop=2
 
 "edit
 " 参考: http://lambdalisue.hatenablog.com/entry/2013/06/23/071344
