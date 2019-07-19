@@ -7,6 +7,7 @@ git config --global help.autocorrect -1
 alias g='git'
 alias gs='git status'
 alias gc='git checkout'
+alias gcm='git checkout master'
 alias gcb='git checkout -b'
 alias gd='git diff'
 alias gg='git grep -n -p'
@@ -21,7 +22,7 @@ alias gf='git fetch origin'
 alias gm='git merge'
 alias gb='git branch'
 alias ack='ack -i'
-alias rc='rails console'
+alias rc='RAILS_ENV=development rails console'
 alias s='source ~/.bash_profile'
 
 SOCK="/tmp/ssh-agent-$USER"
