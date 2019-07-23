@@ -18,13 +18,15 @@ alias gpusho='git push origin'
 alias gpullo='git pull origin'
 alias gpushom='git push origin master'
 alias gpullom='git pull origin master'
+alias gp='git push origin `git rev-parse --abbrev-ref HEAD`'
 alias gf='git fetch origin'
 alias gm='git merge'
-alias gmm='git merge master'
+alias gmm='git merge origin/master'
 alias gb='git branch'
 alias ack='ack -i'
 alias rc='RAILS_ENV=development rails console'
 alias s='source ~/.bash_profile'
+alias bi='bundle install'
 
 SOCK="/tmp/ssh-agent-$USER"
 if test $SSH_AUTH_SOCK && [ $SSH_AUTH_SOCK != $SOCK ]
