@@ -27,6 +27,7 @@ alias ack='ack -i'
 alias rc='RAILS_ENV=development rails console'
 alias s='source ~/.bash_profile'
 alias bi='bundle install'
+alias rc="bundle exec rubocop"
 
 SOCK="/tmp/ssh-agent-$USER"
 if test $SSH_AUTH_SOCK && [ $SSH_AUTH_SOCK != $SOCK ]
