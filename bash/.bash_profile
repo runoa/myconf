@@ -27,7 +27,7 @@ alias ack='ack -i'
 alias rc='RAILS_ENV=development rails console'
 alias s='source ~/.bash_profile'
 alias bi='bundle install'
-alias rc="bundle exec rubocop"
+alias rb="bundle exec rubocop"
 alias la="ls -al"
 
 SOCK="/tmp/ssh-agent-$USER"
