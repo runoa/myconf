@@ -29,6 +29,7 @@ alias s='source ~/.bash_profile'
 alias bi='bundle install'
 alias rb="bundle exec rubocop"
 alias la="ls -al"
+alias conf="cd $HOME/myconf/"
 
 SOCK="/tmp/ssh-agent-$USER"
 if test $SSH_AUTH_SOCK && [ $SSH_AUTH_SOCK != $SOCK ]
