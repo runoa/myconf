@@ -2750,6 +2750,7 @@ __git_complete gpusho __gitk_main
 __git_complete gpullo __gitk_main
 __git_complete gf __gitk_main
 __git_complete gm __gitk_main
+__git_complete gb __gitk_main
 
 # The following are necessary only for Cygwin, and only are needed
 # when the user has tab-completed the executable name and consequently
