@@ -155,7 +155,7 @@ set infercase
 set autoindent
 set matchpairs& matchpairs+=<:>
 set cindent
-set pastetoggle=<c-t>
+set pastetoggle=<c-q>
 set backspace=indent,eol,start
 nnoremap <space>ww :w<cr>
 nnoremap <space>wq :wq<cr>
